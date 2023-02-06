@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>xwing down!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/error.css">
+    <script src="js/error.js"></script>
+    <!-- enable autorefresh on 502? -->
+    <!--# if expr="$status = 502" -->
+    <!--  <meta http-equiv="refresh" content="2"> -->
+    <!--# endif -->
+  </head>
+<body>
+  <!--# if expr="$status = 502" -->
+      <!-- PUT CODE HERE FOR CUSTOMIZED 502 message -->
+  <!--# else -->
+<div class="hiddenstatuscode">200</div> <!-- replace 200 with line below -->
+<div class="hiddenstatusmessage">Lorem Ipsum!</div> <!-- replace placehholder with line below -->
+<!--# echo var="status" default="404" -->
+<!--# echo var="status_text" default="Something goes wrong" -->
+
+    <div class="container">
+      <div class="row">
+          <div class="xs-12 md-6 mx-auto">
+              <div id="countUp">
+                  <h1 class="title">Aww!</h1>
+                  <span class="status">HTTP Status:<div class="number" data-count="">0</div></span>
+                  <div class="statusmessage">HTTPSTATUS MESSAGE PLACEHOLDER</div>
+                  <div class="text">Don't worry, this may not be a big deal.</div>
+                  <div class="text">.</div>
+              </div>
+          </div>
+      </div>
+  </div>  
+  <!--# endif -->
+
+</body>
+</html>
+
